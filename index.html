@@ -1,365 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4th Bayesian Nonparametrics Networking Workshop - Seoul 2026</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Noto Sans', sans-serif;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .gradient-bg-alt {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .committee-card {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .committee-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .profile-fallback {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 2rem;
-            margin: 0 auto;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
-        }
-        
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-        
-        .nav-link {
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #00f2fe;
-        }
-        
-        @media print {
-            .fixed { position: static; }
-            body { font-size: 12pt; line-height: 1.4; }
-            .gradient-bg, .gradient-bg-alt { 
-                background: #4facfe !important;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Selecao Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Noto Sans (Latin) + Noto Sans KR (Korean) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Selecao
+  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body class="smooth-scroll">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg shadow-sm z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold text-gray-800">BNP 2026</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-500">About</a>
-                    <a href="#location" class="nav-link text-gray-600 hover:text-blue-500">Location & Venue</a>
-                    <a href="#committees" class="nav-link text-gray-600 hover:text-blue-500">Committees</a>
-                    <a href="#registration" class="nav-link text-gray-600 hover:text-blue-500">Registration</a>
-                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-500">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button onclick="toggleMenu()" class="text-gray-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="#about" class="block py-2 text-gray-600">About</a>
-                <a href="#location" class="block py-2 text-gray-600">Location & Venue</a>
-                <a href="#committees" class="block py-2 text-gray-600">Committees</a>
-                <a href="#registration" class="block py-2 text-gray-600">Registration</a>
-                <a href="#contact" class="block py-2 text-gray-600">Contact</a>
-            </div>
-        </div>
-    </nav>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">BNP 2026 Networking</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#organizing">Organizing Committee</a></li>
+          <li><a href="#scientific">Scientific Committee</a></li>
+          <li><a href="#pricing">Registration</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white pt-20 pb-16">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">4th Bayesian Nonparametrics Networking Workshop</h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90">July 6-10, 2026 | Seoul, South Korea</p>
-                <p class="text-lg mb-8 opacity-80">University of Seoul Centennial Memorial Hall</p>
-                <div class="space-x-4">
-                    <a href="#about" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300">Learn More</a>
-                </div>
-            </div>
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Welcome to BNP 2026<br> Networking Workshop</h2>
+            <p class="animate__animated animate__fadeInUp">The Bayesian Nonparametrics 2026 Networking Workshop<br> will be held at the University of Seoul Centennial Memorial Hall<BR> from July 6 (MON) to July 10 (FRI), 2026.</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          </div>
         </div>
-    </section>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Our workshop<br> is co-sponsored by</h2>
+            <p class="animate__animated animate__fadeInUp">the Korean Statistical Society (KSS)<br>and the Nonparametric Section of the International Society for Bayesian Analysis (ISBA).</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+    </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">About the Workshop</h2>
-                <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed">
-                    <p class="mb-6">The Department of Statistics at the University of Seoul invites you to attend the 4th Bayesian Nonparametrics (BNP) Networking Workshop, to be held at the University of Seoul Centennial Memorial Hall from Monday, July 6 to Friday, July 10, 2026.</p>
-                    
-                    <p class="mb-6">The workshop is co-sponsored by the Korean Society of Statistics and the Nonparametric Section of the International Society for Bayesian Analysis (ISBA).</p>
-                    
-                    <p class="mb-6">The networking workshop has been held biennially since its inaugural event in 2022 in Cyprus. The BNP Section launched this series to create smaller, informal gatherings with the following goals:</p>
-                    
-                    <div class="grid md:grid-cols-3 gap-6 my-10">
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="font-semibold text-lg mb-3 text-gray-800">Early-Career Focus</h3>
-                            <p class="text-sm">To provide a flexible schedule with dedicated slots for early-career researchers.</p>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="font-semibold text-lg mb-3 text-gray-800">Network Building</h3>
-                            <p class="text-sm">To establish and strengthen local networks while broadening the appeal of BNP.</p>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="font-semibold text-lg mb-3 text-gray-800">Innovation</h3>
-                            <p class="text-sm">To foster brainstorming and innovation.</p>
-                        </div>
-                    </div>
-                    
-                    <p>In 2026, the workshop will take place immediately after the ISBA World Meeting in Nagoya, Japan, offering an excellent opportunity to spark engaging discussions and promote deeper networking within the BNP community—particularly valuable for junior researchers.</p>
-                </div>
-            </div>
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>What is BNP Networking Workshop</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              The Bayesian Nonparametric Networking Workshop has been held biennially since its inaugural event in 2022 in Cyprus. The BNP Section launched this series to create smaller, informal gatherings with the following goals
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>To provide a flexible schedule with dedicated slots for early-career researchers.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>To establish and strengthen local networks while broadening the appeal of BNP.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>To foster brainstorming and innovation</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>In 2026, the workshop will take place immediately after the ISBA World Meeting in Nagoya, Japan, offering an excellent opportunity to spark engaging discussions and promote deeper networking within the BNP community—particularly valuable for junior researchers. </p>
+            <p>The Department of Statistics at the University of Seoul invites you to attend the 4th BNP Networking Workshop, to be held at the University of Seoul Centennial Memorial Hall from July 6 (MON)to July 10 (FRI), 2026.</p>
+            <a href="Venue" class="read-more"><span>Workshop Venue</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
         </div>
-    </section>
 
-    <!-- Location & Venue Section -->
-    <section id="location" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Location & Venue</h2>
-            
-            <div class="grid lg:grid-cols-2 gap-12 mb-12">
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Dates</h3>
-                    <p class="text-lg font-medium text-blue-600 mb-6">July 6th (Monday), 2026 - July 10th (Friday), 2026</p>
-                    
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Venue</h3>
-                    <p class="text-gray-600 leading-relaxed">The conference will be held at the <strong>University of Seoul Centennial Memorial Hall</strong>, located in the northeastern part of the city. The venue is easily accessible by public transportation and offers modern facilities within the campus of one of Korea's leading public universities.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Travel Information</h3>
-                    <p class="text-gray-600 mb-4">Seoul, the capital of South Korea, is well connected to major cities around the world:</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><strong>From Europe:</strong> Direct flights from London, Paris, and Frankfurt take about 10–12 hours.</li>
-                        <li><strong>From Japan:</strong> Flights from Tokyo or Nagoya take roughly two hours.</li>
-                        <li><strong>From China:</strong> Travel times from Beijing and Shanghai are typically two to three hours.</li>
-                        <li><strong>From U.S. Cities:</strong> Approximately 10–11 hours from Los Angeles, 11 hours from Chicago, and 13 hours from New York.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="bg-white p-8 rounded-xl shadow-sm">
-                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Accommodation</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">Seoul is a metropolitan city that offers a wide range of accommodation options. The workshop venue is accessible via Subway Line 1, so areas near Line 1 stations—such as Hoegi, Cheongnyangri, Dongdaemun, Jongno, and Jonggak—are convenient choices. It takes about 30 minutes by subway or bus to reach the workshop venue from Cheongnyangri or Dongdaemun. The campus is also approximately 30–45 minutes from the city center by subway or bus, where many additional hotel options are available.</p>
-                <p class="text-gray-600">
-                    <a href="https://map.seoul.go.kr/smgis2/web/index.do" target="_blank" class="text-blue-500 hover:text-blue-700 underline">Click here for the Seoul Subway Map</a> (Line 1 is marked in dark blue).
-                </p>
-            </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Call To Action</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
         </div>
-    </section>
 
-    <!-- Committees Section -->
-    <section id="committees" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Committees</h2>
+      </div>
 
-            <!-- Local Organizing Committee -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold text-center mb-8 text-gray-700">Local Organizing Committee</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Joungyoun Kim -->
-                    <a href="https://sites.google.com/view/joungyoun" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <img src="https://lh6.googleusercontent.com/PmAX1Y3lUICAz0gumCGCz5EzjuQ5CW29dztdVTcdp0oX7WQHdLsToEoNoKNgqxZB3Gmo-L5JlHAtmPuVRqjHKHarjD-EQrTb8Q_KY-GAG5cAmcApW_LV8dTrw65KOBLDgLaeozqmoe2I-XtN5UTgmG_RxcuKvfma__5tl8lioYZxv5TMGIVig=w1280" alt="Joungyoun Kim" class="profile-img mb-4" onerror="handleImageError(this, 'Joungyoun Kim')">
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Joungyoun Kim (Chair)</h4>
-                        <p class="text-gray-600 mb-2">University of Seoul</p>
-                        <p class="text-sm text-blue-600">joungyoun@gmail.com</p>
-                    </a>
-                    
-                    <!-- Minwoo Chae -->
-                    <a href="https://sds.postech.ac.kr/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <div class="profile-fallback mb-4" style="background-color: #28a745;">MC</div>
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Minwoo Chae</h4>
-                        <p class="text-gray-600 mb-2">POSTECH</p>
-                        <p class="text-sm text-blue-600">mchae@postech.ac.kr</p>
-                    </a>
-                    
-                    <!-- Gyuhyeong Goh -->
-                    <a href="https://bayesiangoh.knu.ac.kr/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <img src="https://lh3.googleusercontent.com/HRrG-CuwotZSZPiS5TimIpxeqgPPT3KzR2CquKc6eNMzeHSjuPcTjzZxUUDiGQBPgD8hsluAz4ya6IY_F5wmCUPkGJdXe0MOsx_hIa1Sx3YZaZHYooJfw4d4Z64iCDih2qnZlSjEjtl0xOBr20KQiamY1N6LfKEcj3b-xB00b-LKXlb8sgfx6g=w1280" alt="Gyuhyeong Goh" class="profile-img mb-4" onerror="handleImageError(this, 'Gyuhyeong Goh')">
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Gyuhyeong Goh</h4>
-                        <p class="text-gray-600 mb-2">Kyungbook National University</p>
-                        <p class="text-sm text-blue-600">ggoh@knu.ac.kr</p>
-                    </a>
-                    
-                    <!-- Jong-June Jeon -->
-                    <a href="http://ranking.uos.ac.kr/index_en.html" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <div class="profile-fallback mb-4" style="background-color: #ffc107;">JJ</div>
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Jong-June Jeon</h4>
-                        <p class="text-gray-600 mb-2">University of Seoul</p>
-                        <p class="text-sm text-blue-600">jj.jeon@uos.ac.kr</p>
-                    </a>
-                    
-                    <!-- Juhee Lee -->
-                    <a href="https://sites.google.com/ucsc.edu/juheelee/home" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <img src="https://lh5.googleusercontent.com/s52ac751azQGvQrEEimHgRITE7N7BokX5gRTu-1Kq-FD52xbvJvuaA4Q1QWAKbKX-PGoyw4uyoZphRtLe_DT3mWPqg9k-W5CdgSf8PUq2yqZMb32Zpl_6ma0jZPPaC34Y9bPqUZ-quL18hoBmAMqT5onRnu0nHgo-U0ybmnGmXkG3ivAlB9ZRA=w1280" alt="Juhee Lee" class="profile-img mb-4" onerror="handleImageError(this, 'Juhee Lee')">
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Juhee Lee</h4>
-                        <p class="text-gray-600 mb-2">University of California, Santa Cruz</p>
-                        <p class="text-sm text-blue-600">jle297@ucsc.edu</p>
-                    </a>
-                </div>
+    </section><!-- /Call To Action Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>What we do offer</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-cash-stack" style="color: #0dcaf0;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Nesciunt Mete</h3>
+              </a>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
             </div>
+          </div><!-- End Service Item -->
 
-            <!-- Scientific Committee -->
-            <div>
-                <h3 class="text-2xl font-semibold text-center mb-8 text-gray-700">Scientific Committee</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Long Nguyen -->
-                    <a href="https://dept.stat.lsa.umich.edu/~xuanlong/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <div class="profile-fallback mb-4" style="background-color: #007bff;">LN</div>
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Long Nguyen (Chair)</h4>
-                        <p class="text-gray-600 mb-2">University of Michigan</p>
-                        <p class="text-sm text-blue-600">xuanlong@umich.edu</p>
-                    </a>
-                    
-                    <!-- Minwoo Chae -->
-                    <a href="https://sds.postech.ac.kr/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <div class="profile-fallback mb-4" style="background-color: #28a745;">MC</div>
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Minwoo Chae</h4>
-                        <p class="text-gray-600 mb-2">POSTECH</p>
-                        <p class="text-sm text-blue-600">mchae@postech.ac.kr</p>
-                    </a>
-                    
-                    <!-- Juho Lee -->
-                    <a href="https://juho-lee.github.io/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <div class="profile-fallback mb-4" style="background-color: #17a2b8;">JL</div>
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Juho Lee</h4>
-                        <p class="text-gray-600 mb-2">KAIST</p>
-                        <p class="text-sm text-blue-600">juholee@kaist.ac.kr</p>
-                    </a>
-                    
-                    <!-- Andrea Cremaschi -->
-                    <a href="https://andcre87.github.io/andreacremaschi.github.io/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <img src="https://andcre87.github.io/andreacremaschi.github.io/MainFig2.jpg" alt="Andrea Cremaschi" class="profile-img mb-4" onerror="handleImageError(this, 'Andrea Cremaschi')">
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Andrea Cremaschi</h4>
-                        <p class="text-gray-600 mb-2">Science and Technology, IE University in Madrid, Spain</p>
-                        <p class="text-sm text-blue-600">No email provided</p>
-                    </a>
-                    
-                    <!-- Weining Shen -->
-                    <a href="https://faculty.sites.uci.edu/weinings/" target="_blank" class="committee-card bg-white rounded-xl shadow-sm hover:shadow-lg p-6 text-center">
-                        <img src="https://faculty.sites.uci.edu/weinings/files/2015/08/Photo-Aug-25-5-23-59-PM1-856x1024.jpg" alt="Weining Shen" class="profile-img mb-4" onerror="handleImageError(this, 'Weining Shen')">
-                        <h4 class="text-lg font-semibold mb-1 text-gray-800">Weining Shen</h4>
-                        <p class="text-gray-600 mb-2">UCI</p>
-                        <p class="text-sm text-blue-600">No email provided</p>
-                    </a>
-                </div>
-                
-                <div class="text-center mt-8">
-                    <p class="text-gray-600 italic">Please note: The complete list of scientific committee members is pending confirmation with Long Nguyen.</p>
-                </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week" style="color: #fd7e14;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Eosle Commodi</h3>
+              </a>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-text" style="color: #20c997;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Ledo Markt</h3>
+              </a>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-credit-card-2-front" style="color: #df1529;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Asperiores Commodit</h3>
+              </a>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-globe" style="color: #6610f2;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Velit Doloremque</h3>
+              </a>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-clock" style="color: #f3268c;"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Dolori Architecto</h3>
+              </a>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+            </div>
+          </div><!-- End Service Item -->
+
         </div>
-    </section>
 
-    <!-- Registration Section -->
-    <section id="registration" class="py-16 gradient-bg-alt text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">Registration</h2>
-            <div class="max-w-2xl mx-auto">
-                <p class="text-xl mb-8 opacity-90">Registration fees will be announced at a later date. Please check back for updates.</p>
-                <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-xl p-8">
-                    <h3 class="text-xl font-semibold mb-4">Registration Information</h3>
-                    <p class="opacity-80">Details about registration fees, deadlines, and the registration process will be provided soon. We recommend checking this page regularly for the latest updates.</p>
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Frequently Asked Questions</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-12">
+            <div class="custom-accordion" id="accordion-faq">
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
+                    Example Question 1
+                  </button>
+                </h2>
+
+                <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    Example Answer 1
+                  </div>
                 </div>
+              </div>
+              <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-2">
+                    Example Question 2
+                  </button>
+                </h2>
+
+                <div id="collapse-faq-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    Example Answer 2
+                  </div>
+                </div>
+              </div>
+              <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
+                    Example Question 3
+                  </button>
+                </h2>
+
+                <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    Example Answer 3
+                  </div>
+                </div>
+              </div>
+            <!-- .accordion-item -->
+
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </section><!-- /Faq Section -->
+
+    <!-- Team Section -->
+    <section id="organizing" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Committee</h2>
+        <p>Local Organizing Committee</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/joungyoun-kim.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>CHAIR | Joungyoun Kim</h4>
+                <span>University of Seoul</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/minwoo-chae.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Minwoo Chae</h4>
+                <span>POSTECH</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/gyuhyeong-goh.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Gyuhyeong Goh</h4>
+                <span>Kyungpook National University</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/jong-june-jeon.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Jong-June Jeon</h4>
+                <span>University of Seoul</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/juhee-lee.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Juhee Lee</h4>
+                <span>University of California, Santa Cruz</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Team Section -->
+    <section id="scientific" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Committee</h2>
+        <p>Scientific Committee</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/long-nguyen.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>CHAIR | Long Nguyen</h4>
+                <span>University of Michigan</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/minwoo-chae.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Minwoo Chae</h4>
+                <span>POSTECH</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/juho-lee.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Juho Lee</h4>
+                <span>KAIST</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/andrea-cremaschi.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Andrea Cremaschi</h4>
+                <span>Science and Technology, IE University in Madrid, Spain</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member" style="width: 100%; display: flex; flex-direction: column;">
+              <div class="member-img" style="height: 400px; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/img/team/weining-shen.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              </div>
+              <div class="member-info" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                <h4>Weining Shen</h4>
+                <span>UCI</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Registration Fee</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>ISBA Student</h3>
+              <h4><sup>$</sup>TBA</h4>
+              <ul>
+                <li><strong>For ISBA students</strong></li>
+                <li>-</li>
+                <li><sup>$</sup>TBA Early Bird (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Regular (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Late (after 00/00)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-item">
+              <h3>Student</h3>
+              <h4><sup>$</sup>TBA</h4>
+              <ul>
+                <li><strong>For non-ISBA students</strong></li>
+                <li>-</li>
+                <li><sup>$</sup>TBA Early Bird (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Regular (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Late (after 00/00)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <h3>ISBA Member</h3>
+              <h4><sup>$</sup>TBA</h4>
+              <ul>
+                <li><strong>For ISBA members</strong></li>
+                <li>-</li>
+                <li><sup>$</sup>TBA Early Bird (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Regular (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Late (after 00/00)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-item">
+              <h3>Standard</h3>
+              <h4><sup>$</sup>TBA</h4>
+              <ul>
+                <li><strong>For non-ISBA members</strong></li>
+                <li>-</li>
+                <li><sup>$</sup>TBA Early Bird (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Regular (before 00/00)</li>
+                <li class="na"><sup>$</sup>TBA Late (after 00/00)</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Contact</h2>
-            <div class="max-w-2xl mx-auto text-center">
-                <p class="text-lg text-gray-600 mb-8">For all inquiries related to the workshop, please contact us at:</p>
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <p class="text-xl font-semibold text-gray-800 mb-4">Workshop Email</p>
-                    <p class="text-gray-600 mb-6"><strong>TBA</strong></p>
-                    <p class="text-sm text-gray-500 italic">Note: A dedicated email account for the workshop is required and will be updated here.</p>
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Workshop Venue</h3>
+                <p>163, Seoulsiripdae-ro, Dongdaemun-gu, Seoul, Republic of Korea</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>bnpnetworking2026@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2026 4th Bayesian Nonparametrics Networking Workshop. All Rights Reserved.</p>
-            <p class="text-gray-400 text-sm">Co-sponsored by the Korean Society of Statistics and the Nonparametric Section of ISBA</p>
-        </div>
-    </footer>
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-        
-        function handleImageError(img, name) {
-            const initials = name.split(' ').map(n => n[0]).join('');
-            const colors = ['#007bff', '#28a745', '#dc3545', '#ffc107', '#17a2b8', '#6f42c1', '#fd7e14'];
-            const colorIndex = name.length % colors.length;
-            
-            const fallback = document.createElement('div');
-            fallback.className = 'profile-fallback';
-            fallback.style.backgroundColor = colors[colorIndex];
-            fallback.textContent = initials;
-            
-            img.parentNode.replaceChild(fallback, img);
-        }
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h5 class="sitename">Bayesian Nonparametrics 2026 Networking Workshop</h5>
+      <span>Co-sponsored by <a href="https://eng.kss.or.kr">KSS</a> and <a href="https://bnp-isba.github.io">BNP-ISBA</a></span>
+      <p></p>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">2025 Department of Statistics, Kyungpook National University</strong>. <span>All Rights Reserved</span>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
