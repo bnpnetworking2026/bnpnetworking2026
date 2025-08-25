@@ -44,9 +44,9 @@ The Bayesian Nonparametric Networking Workshop has been held biennially since it
 
 Registration fees will be announced soon. Categories include:
 - ISBA Student
-- Non-ISBA Member (Student)
+- Non-ISBA Student
 - ISBA Member
-- Non-ISBA Member (Regular)
+- Non-ISBA Member
 
 Early bird, regular, and late registration periods will be available.
 
