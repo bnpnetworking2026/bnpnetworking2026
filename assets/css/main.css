@@ -1963,13 +1963,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
-
-/*--------------------------------------------------------------
 # Blog Posts Section
 --------------------------------------------------------------*/
 .blog-posts article {
@@ -2591,7 +2584,6 @@ section,
 }
 
 .sponsors .sponsor-logo {
-  width: auto;
   height: 80px;
   margin-bottom: 20px;
   transition: all 0.3s ease-in-out;
